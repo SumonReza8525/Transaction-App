@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payoo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="h-[100vh] bg-gray-200 flex justify-center items-center flex-col">
+    <div
+      class="w-[380px] h-[130px] bg-[url('./assets/bg.png')] bg-no-repeat bg-cover flex justify-center items-center"
+    >
+      <img src="./assets/Group.png" alt="" />
+    </div>
+    <div
+      class="w-[390px] space-y-4 bg-white min-h-[300px] rounded-3xl p-6 shadow-2xl"
+    >
+      <label class="block font-bold">Phone Number</label>
+      <input
+        id="phoneNumber"
+        type="text"
+        class="input w-[100%] rounded-3xl outline-none h-12"
+        placeholder="Enter your phone number"
+      />
+
+      <label class="font-bold block">Password</label>
+      <input
+        id="pinNumber"
+        type="password"
+        class="input w-[100%] rounded-3xl outline-none h-12"
+        placeholder="Enter your pin"
+      />
+
+      <button
+        id="loginButton"
+        class="btn bg-[#0874F2] text-white font-semibold text-lg w-[100%] mt-4 block rounded-3xl h-12"
+      >
+        Login
+      </button>
+    </div>
+
+    <script src="./scripts/login.js"></script>
+  </body>
+</html>
