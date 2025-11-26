@@ -60,39 +60,45 @@
       </div>
 
       <!-- Card Container -->
-      <div class="grid grid-cols-3 gap-3 p-4 manrope">
+      <div id="cardContainer" class="grid grid-cols-3 gap-3 p-4 manrope">
         <div
+          id="card1"
           class="flex flex-col justify-center items-center border-2 border-gray-300 p-5 rounded-2xl"
         >
           <img src="./assets/money1.png" alt="" />
           <p>Add Money</p>
         </div>
         <div
+          id="card2"
           class="flex flex-col justify-center items-center border-2 border-gray-300 p-5 rounded-2xl"
         >
           <img src="./assets/purse1.png" alt="" />
           <p>Cash Out</p>
         </div>
         <div
+          id="card3"
           class="flex flex-col justify-center items-center border-2 border-gray-300 p-5 rounded-2xl"
         >
           <img src="./assets/send1.png" alt="" />
           <p class="whitespace-nowrap">Transfer Money</p>
         </div>
         <div
+          id="card4"
           class="flex flex-col justify-center items-center border-2 border-gray-300 p-5 rounded-2xl"
         >
           <img src="./assets/wallet1.png" alt="" />
           <p>Get Bonus</p>
         </div>
         <div
+          id="card5"
           class="flex flex-col justify-center items-center border-2 border-gray-300 p-5 rounded-2xl"
         >
           <img src="./assets/transaction1.png" alt="" />
           <p>Pay Bill</p>
         </div>
         <div
-          class="flex flex-col justify-center items-center border-2 border-gray-300 p-5 rounded-2xl"
+          id="card6"
+          class="selected flex flex-col justify-center items-center border-2 border-gray-300 p-5 rounded-2xl"
         >
           <img src="./assets/bonus1.png" alt="" />
           <p>Transactions</p>
@@ -101,7 +107,7 @@
     </section>
 
     <!-- Add Money Section  -->
-    <section class="p-4">
+    <section id="addMoneySection" class="displayNone p-4">
       <p class="text-xl font-semibold">Add Money</p>
 
       <div class="bg-white p-4 space-y-3 rounded-2xl mt-7">
@@ -150,7 +156,7 @@
     </section>
 
     <!-- Cash Out Section -->
-    <section class="p-4">
+    <section id="cashOutSection" class="displayNone p-4">
       <p class="text-xl font-semibold">Cash Out</p>
 
       <div class="bg-white p-4 space-y-3 rounded-2xl mt-7">
@@ -187,7 +193,7 @@
     </section>
 
     <!-- Transfer Money -->
-    <section class="p-4">
+    <section id="transferMoneySection" class="displayNone p-4">
       <p class="text-xl font-semibold">Transfer Money</p>
 
       <div class="bg-white p-4 space-y-3 rounded-2xl mt-7">
@@ -224,7 +230,7 @@
     </section>
 
     <!-- Get Bonus Section -->
-    <section class="p-4">
+    <section id="getBonusSection" class="displayNone p-4">
       <p class="text-xl font-semibold">Get Bonus</p>
 
       <div class="bg-white p-4 space-y-3 rounded-2xl mt-7">
@@ -245,7 +251,7 @@
 
     <!-- Pay Bill Section -->
 
-    <section class="p-4">
+    <section id="payBillsection" class="displayNone p-4">
       <p class="text-xl font-semibold">Pay Bill</p>
 
       <div class="bg-white p-4 space-y-3 rounded-2xl mt-7">
@@ -287,20 +293,20 @@
           id="payBillButton"
           class="btn bg-[#0874F2] text-white font-semibold text-lg w-[100%] mt-4 block rounded-3xl h-12"
         >
-          Pay Now
+          Pay Bill
         </button>
       </div>
     </section>
 
     <!-- Transactions section -->
 
-    <section class="p-4">
+    <section id="transactionSection" class="p-4">
       <div class="flex justify-between items-center">
         <p class="text-xl font-semibold">Transaction History</p>
         <p class="text-gray-500">View All</p>
       </div>
 
-      <div>
+      <div id="historyContainer">
         <div
           class="flex justify-between items-center bg-white p-3 mt-5 rounded-2xl"
         >
@@ -312,7 +318,7 @@
             />
             <div>
               <p class="text-xl font-semibold">Electricity Bill</p>
-              <p class="text-gray-500">Today 01.44 AM</p>
+              <p class="text-gray-500">Amount : $400</p>
             </div>
           </div>
           <p><i class="fa-solid fa-ellipsis-vertical"></i></p>
@@ -328,7 +334,7 @@
             />
             <div>
               <p class="text-xl font-semibold">Add Money</p>
-              <p class="text-gray-500">Today 01.44 AM</p>
+              <p class="text-gray-500">Amount : $2000</p>
             </div>
           </div>
           <p><i class="fa-solid fa-ellipsis-vertical"></i></p>
@@ -344,7 +350,7 @@
             />
             <div>
               <p class="text-xl font-semibold">Transfer Money</p>
-              <p class="text-gray-500">Today 01.44 AM</p>
+              <p class="text-gray-500">Amount : $1200</p>
             </div>
           </div>
           <p><i class="fa-solid fa-ellipsis-vertical"></i></p>
@@ -360,7 +366,7 @@
             />
             <div>
               <p class="text-xl font-semibold">Get Bonus</p>
-              <p class="text-gray-500">Today 01.44 AM</p>
+              <p class="text-gray-500">Amount : $3800</p>
             </div>
           </div>
           <p><i class="fa-solid fa-ellipsis-vertical"></i></p>
