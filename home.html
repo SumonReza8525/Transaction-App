@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
 
-  <body class="bg-gray-200 space-y-4">
+  <body class="bg-gray-200 space-y-4 max-w-[500px] mx-auto">
     <!-- Section 1 -->
 
     <section class="bg-white pb-5 rounded-b-2xl">
@@ -36,7 +36,9 @@
         <div class="flex justify-between items-center">
           <img class="w-[60px]" src="./assets/Group.png" alt="" />
           <div>
-            <h1 id="availableBalance" class="text-3xl font-semibold">$45000</h1>
+            <h1 class="text-3xl font-semibold">
+              $<span id="availableBalance">45000</span>
+            </h1>
             <p class="font-[300]">Availabe Balance</p>
           </div>
         </div>
@@ -58,7 +60,7 @@
       </div>
 
       <!-- Card Container -->
-      <div class="grid grid-cols-3 gap-3 p-4">
+      <div class="grid grid-cols-3 gap-3 p-4 manrope">
         <div
           class="flex flex-col justify-center items-center border-2 border-gray-300 p-5 rounded-2xl"
         >
@@ -105,16 +107,19 @@
       <div class="bg-white p-4 space-y-3 rounded-2xl mt-7">
         <label class="block font-bold">Select a Bank</label>
         <select
+          id="addMoneySelect"
+          required
           class="select w-full outline-none rounded-3xl h-12 font-bold text-gray-400"
         >
-          <option disabled selected>Select Bank</option>
-          <option>AB Bank</option>
-          <option>IFIC Bank</option>
-          <option>Jamuna Bank</option>
+          <option id="option1" value="">Select a Bank</option>
+          <option value="AB Bank">AB Bank</option>
+          <option value="IFIC Bank">IFIC Bank</option>
+          <option value="Jamuna Bank">Jamuna Bank</option>
         </select>
 
         <label class="block font-bold">Bank Account Number</label>
         <input
+          id="addMoneyAccount"
           type="text"
           class="input w-[100%] rounded-3xl outline-none h-12"
           placeholder="Enter 11 digit account number"
@@ -122,18 +127,21 @@
 
         <label class="font-bold block">Amount to Add</label>
         <input
+          id="addMoneyAmount"
           type="text"
           class="input w-[100%] rounded-3xl outline-none h-12"
           placeholder="Add Amount"
         />
         <label class="font-bold block">Password</label>
         <input
+          id="addMoneyPin"
           type="password"
           class="input w-[100%] rounded-3xl outline-none h-12"
           placeholder="Enter your pin"
         />
 
         <button
+          id="addMoneyButton"
           class="btn bg-[#0874F2] text-white font-semibold text-lg w-[100%] mt-4 block rounded-3xl h-12"
         >
           Add Money
@@ -148,6 +156,7 @@
       <div class="bg-white p-4 space-y-3 rounded-2xl mt-7">
         <label class="block font-bold">Bank Account Number</label>
         <input
+          id="cashOutAccount"
           type="text"
           class="input w-[100%] rounded-3xl outline-none h-12"
           placeholder="Enter 11 digit account number"
@@ -155,18 +164,21 @@
 
         <label class="font-bold block">Amount</label>
         <input
+          id="cashOutAmmount"
           type="text"
           class="input w-[100%] rounded-3xl outline-none h-12"
           placeholder="Enter Amount to withdraw"
         />
         <label class="font-bold block">Password</label>
         <input
+          id="cashOutPin"
           type="password"
           class="input w-[100%] rounded-3xl outline-none h-12"
           placeholder="Enter your pin"
         />
 
         <button
+          id="withdrawMoneyButton"
           class="btn bg-[#0874F2] text-white font-semibold text-lg w-[100%] mt-4 block rounded-3xl h-12"
         >
           Withdraw Money
@@ -181,6 +193,7 @@
       <div class="bg-white p-4 space-y-3 rounded-2xl mt-7">
         <label class="block font-bold">Bank Account Number</label>
         <input
+          id="transferAccount"
           type="text"
           class="input w-[100%] rounded-3xl outline-none h-12"
           placeholder="Enter 11 digit account number"
@@ -188,18 +201,21 @@
 
         <label class="font-bold block">Amount</label>
         <input
+          id="transferAmmount"
           type="text"
           class="input w-[100%] rounded-3xl outline-none h-12"
           placeholder="Enter Amount to withdraw"
         />
         <label class="font-bold block">Password</label>
         <input
+          id="transferPin"
           type="password"
           class="input w-[100%] rounded-3xl outline-none h-12"
           placeholder="Enter your pin"
         />
 
         <button
+          id="transferButton"
           class="btn bg-[#0874F2] text-white font-semibold text-lg w-[100%] mt-4 block rounded-3xl h-12"
         >
           Send Money
@@ -235,16 +251,18 @@
       <div class="bg-white p-4 space-y-3 rounded-2xl mt-7">
         <label class="block font-bold">Select to Pay</label>
         <select
+          id="payBillSelect"
           class="select w-full outline-none rounded-3xl h-12 font-bold text-gray-400"
         >
-          <option disabled selected>Select Bank</option>
-          <option>AB Bank</option>
-          <option>IFIC Bank</option>
-          <option>Jamuna Bank</option>
+          <option value="" disabled selected>Select Bank</option>
+          <option value="AB Bank">AB Bank</option>
+          <option value="IFIC Bank">IFIC Bank</option>
+          <option value="Jamuna Bank">Jamuna Bank</option>
         </select>
 
         <label class="block font-bold">Bank Account Number</label>
         <input
+          id="payBillAccount"
           type="text"
           class="input w-[100%] rounded-3xl outline-none h-12"
           placeholder="Enter 11 digit account number"
@@ -252,18 +270,21 @@
 
         <label class="font-bold block">Amount</label>
         <input
+          id="payBillAmount"
           type="text"
           class="input w-[100%] rounded-3xl outline-none h-12"
           placeholder="Enter Amount to withdraw"
         />
         <label class="font-bold block">Password</label>
         <input
+          id="paybillPin"
           type="password"
           class="input w-[100%] rounded-3xl outline-none h-12"
           placeholder="Enter your pin"
         />
 
         <button
+          id="payBillButton"
           class="btn bg-[#0874F2] text-white font-semibold text-lg w-[100%] mt-4 block rounded-3xl h-12"
         >
           Pay Now
@@ -350,7 +371,7 @@
     <!-- Footer Section -->
 
     <footer
-      class="footer footer-horizontal footer-center bg-gray-500 text-white mt-15 text-base-content rounded p-10 rounded-t-xl"
+      class="footer footer-horizontal footer-center bg-gray-500 text-white mt-15 text-base-content rounded p-10 mb-0 rounded-t-xl"
     >
       <nav class="grid grid-flow-col gap-4">
         <a class="link link-hover">About us</a>
