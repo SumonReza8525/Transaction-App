@@ -257,6 +257,7 @@ for (let n = 0; n < cards.length; n++) {
   cards[n].addEventListener("click", () => {
     for (let i = 0; i < cards.length; i++) {
       cards[i].classList.remove("selected");
+
       sections[i].classList.add("displayNone");
     }
     cards[n].classList.add("selected");
